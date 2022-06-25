@@ -1,24 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
 import {MdOutlineSearch,MdOutlinePersonOutline,MdOutlineShoppingBag, MdOutlineFavoriteBorder} from 'react-icons/md'
+import {Link} from 'react-router-dom'
+import { GlobalContext } from '../Context'
+import {useContext} from 'react';
+
 
 const Container = styled.div`
-    height: 60px;
+    height: ${props => props.height} ;
+    display: ${props => props.displayed === false? "none" : "block"} ;
 `
 const Wrapper = styled.div`
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center ;
+    align-items: ${props => props.alignItems } ;
+
 `
 
 const Left = styled.div`
-  /*to give left,center and right same size */
-  flex: 1 ;
+  flex: ${props => props.flex ? "1" : "1"} ;
+  display: ${props => props.display };
+  justify-content: ${props => props.display ? "space-between" : ''} ;
+  align-items: center ;
 `
 const List = styled.div`
   display: flex;
-  justify-content:space-around ;
+  justify-content:space-between ;
+  cursor: pointer;
 `
 const ListItem = styled.p`
 
@@ -40,7 +49,6 @@ const Logo = styled.h1`
 `
 const Right = styled.div`
   flex: 1 ;
-  /* display: flex; */
 `
 const ListItemContainer = styled.div`
   display: flex;
@@ -60,52 +68,197 @@ const SearchContainer = styled.div`
     margin-left: 25px;
     padding: 5px;
 `
+// to style the link(a)
+const NavLink = styled(Link)`
+    text-decoration: none;
+    color: black;
+`
+// Dropdwon menu
+const DropdownMenu = styled.div`
+  display: flex ;
+  flex-direction:column ;
+  font-size: ${props => props.fontSize}  ;
+  margin-right: 10% ;
+  align-items: flex-start ;
+ 
+`
+const DropdownMenuItem = styled.p`
+  margin: 2px ;
+  cursor: pointer;
+  color: ${props => props.color ? props.color : "grey"};
+  
+  &:hover{
+    font-weight:bold ;
+    color: black;
+  }
+`
+const DropdownMenuTitle = styled.h3`
+  font-weight: 400 ;
+`
+const DropdownMenuImage = styled.img`
+  height: 70%;
+  width: 70%;
+  margin-left: 20% ;
+`
 
-
-
-
-
-
-
+ const DropdownMenuSpan = styled.span`
+  font-size: 10px ;
+  
+ `
 const Navbar = () => {
-  return (
-    <Container>
-      <Wrapper>
-        <Left>
-          <List>
-              <ListItem>Ladies</ListItem>
-              <ListItem>Men</ListItem>
-              <ListItem>Kids</ListItem>
-              <ListItem>Home</ListItem>
-            </List>
-        </Left>
-        <Center>
-          <Logo>ARWA</Logo>
-        </Center>
-        <Right>
-          <List>
-            <ListItemContainer>
-                <MdOutlineSearch style={{fontSize: '22px'}}/>
-                <ListItemText>To search</ListItemText>
-            </ListItemContainer>
-            <ListItemContainer>
-                <MdOutlinePersonOutline style={{fontSize: '22px'}}/>
-                <ListItemText>Login</ListItemText>
-            </ListItemContainer>
-            <ListItemContainer>
-                <MdOutlineFavoriteBorder style={{fontSize: '22px'}}/>
-                <ListItemText>Favorites</ListItemText>
-            </ListItemContainer>
-            <ListItemContainer>
-                <MdOutlineShoppingBag style={{fontSize: '22px'}}/>
-                <ListItemText>Shopping bag</ListItemText>
-            </ListItemContainer>
-          </List>
-        </Right>
+  // react states hooks imported from context managaer 
+  // display and handleDropdownMenu to handle the dropdownMenu
+  const {displayed, handleDropdownMenu, menuItemName} = useContext(GlobalContext)
+  console.log(menuItemName)
 
-      </Wrapper>
+  return (
+    <>
+      <Container height="10vh">
+        <Wrapper alignItems="center">
+          <Left>
+            <List>
+                <ListItemContainer>
+                  <ListItem
+                  onMouseEnter={(e) => handleDropdownMenu(e)}>
+                  Ladies</ListItem>
+                </ListItemContainer>
+                <ListItem onMouseEnter={(e) => handleDropdownMenu(e)}>Men</ListItem>
+               <ListItem onMouseEnter={(e) => handleDropdownMenu(e)}>Kids</ListItem> 
+                <NavLink to="/"><ListItem>Home</ListItem></NavLink>
+              </List>
+          </Left>
+          <Center>
+              <NavLink to="/"><Logo>ARWA</Logo></NavLink>
+          </Center>
+          <Right>
+            <List>
+              <ListItemContainer>
+                  <MdOutlineSearch style={{fontSize: '22px'}}/>
+                  <ListItemText>To search</ListItemText>
+              </ListItemContainer>
+              <ListItemContainer>
+                  <MdOutlinePersonOutline style={{fontSize: '22px'}}/>
+                  <NavLink to="/login"><ListItemText>Login</ListItemText></NavLink>
+              </ListItemContainer>
+              <ListItemContainer>
+                  <MdOutlineFavoriteBorder style={{fontSize: '22px'}}/>
+                  <NavLink to="/favorite"><ListItemText>Favorites</ListItemText></NavLink>
+              </ListItemContainer>
+              <ListItemContainer>
+                  <MdOutlineShoppingBag style={{fontSize: '22px'}}/>
+                  <NavLink to="/shoppingbag"><ListItemText>Shopping bag</ListItemText></NavLink>
+              </ListItemContainer>
+            </List>
+          </Right>
+
+        </Wrapper>
     </Container>
+
+
+    {menuItemName === "Kids" ? 
+        <Container height="50vh" displayed={displayed} onMouseLeave={() => handleDropdownMenu()}>
+            <Wrapper alignItems="flex-start">  
+                       <Left flex="2" display="flex">
+                        <DropdownMenu>
+                            <DropdownMenuItem>
+                              Girls
+                              <br/>
+                              <DropdownMenuSpan>From 5 to 14 years
+                              </DropdownMenuSpan>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem>
+                              Boys
+                              <br/>
+                              <DropdownMenuSpan>From 5 to 14 years
+                              </DropdownMenuSpan>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem>
+                              Baby girl
+                              <br/>
+                              <DropdownMenuSpan>From 9 months to 6 years
+                              </DropdownMenuSpan>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem>
+                              Baby boy
+                              <br/>
+                              <DropdownMenuSpan>From 9 months to 6 years
+                              </DropdownMenuSpan>
+                            </DropdownMenuItem>
+                            {/* <DropdownMenuItem>
+                              Newborn babies
+                              <br/>
+                              <DropdownMenuSpan>From 0 months to 24 months
+                              </DropdownMenuSpan> */}
+                            {/* </DropdownMenuItem>       */}
+                        </DropdownMenu>     
+                        <DropdownMenu fontSize="20px">
+                            <DropdownMenuTitle>Clothinng</DropdownMenuTitle>
+                          <DropdownMenuItem color="red">Sale</DropdownMenuItem>
+                          <DropdownMenuItem>New collection</DropdownMenuItem>
+                          <DropdownMenuItem>Clothing</DropdownMenuItem>
+                          <DropdownMenuItem>accessories</DropdownMenuItem>
+                          <DropdownMenuItem>Remarkable</DropdownMenuItem>
+                         
+                    </DropdownMenu>
+                    <DropdownMenu>
+                        <DropdownMenuTitle>Accessories</DropdownMenuTitle>
+                       <DropdownMenuItem>Shoes</DropdownMenuItem>
+                       <DropdownMenuItem>sun glasses</DropdownMenuItem>
+                       <DropdownMenuItem>Socks</DropdownMenuItem>
+                       <DropdownMenuItem>Bibs</DropdownMenuItem>
+                       <DropdownMenuItem>hats</DropdownMenuItem>
+                       <DropdownMenuItem>Toys</DropdownMenuItem>
+                       <DropdownMenuItem>Swim suits</DropdownMenuItem>
+                    </DropdownMenu>
+                    </Left> 
+                    
+                    <Right>
+                        <DropdownMenuImage  src="https://st.mngbcn.com/web/oi/sections/home/bannersRebajas/2022/06_junio/003_NL_nino.jpg?ts=3312281451512&imwidth=352&imdensity=2"></DropdownMenuImage>
+                    </Right>
+            </Wrapper>            
+        </Container>
+    :
+     <Container height="50vh" displayed={displayed} onMouseLeave={() => handleDropdownMenu()}>
+        <Wrapper alignItems="flex-start">
+                  <Left flex="2" display="flex">
+                    <DropdownMenu fontSize="20px">
+                       <DropdownMenuItem color="red">Sale</DropdownMenuItem>
+                       <DropdownMenuItem>New collection</DropdownMenuItem>
+                       <DropdownMenuItem>Clothing</DropdownMenuItem>
+                       <DropdownMenuItem>accessories</DropdownMenuItem>
+                       <DropdownMenuItem>Plus size</DropdownMenuItem>
+                       <DropdownMenuItem></DropdownMenuItem>
+                    </DropdownMenu>
+                    <DropdownMenu>
+                        <DropdownMenuTitle>Clothinng</DropdownMenuTitle>
+                       <DropdownMenuItem color="red">Sale</DropdownMenuItem>
+                       <DropdownMenuItem>New collection</DropdownMenuItem>
+                       <DropdownMenuItem>Clothing</DropdownMenuItem>
+                       <DropdownMenuItem>accessories</DropdownMenuItem>
+                       <DropdownMenuItem>Plus size</DropdownMenuItem>
+                       <DropdownMenuItem></DropdownMenuItem>
+                    </DropdownMenu>
+                    <DropdownMenu>
+                        <DropdownMenuTitle>Accessories</DropdownMenuTitle>
+                       <DropdownMenuItem>Shoes</DropdownMenuItem>
+                       <DropdownMenuItem>bags</DropdownMenuItem>
+                       <DropdownMenuItem>sun glasses</DropdownMenuItem>
+                       <DropdownMenuItem>Belts</DropdownMenuItem>
+                       <DropdownMenuItem>scarves</DropdownMenuItem>
+                       <DropdownMenuItem>hats</DropdownMenuItem>
+                    </DropdownMenu>
+                </Left>      
+                <Right>
+                    {menuItemName === "Ladies" ?  <DropdownMenuImage  src="https://st.mngbcn.com/web/oi/sections/home/bannersRebajas/2022/06_junio/003_NL_woman.jpg?ts=3312281451512&imwidth=352&imdensity=2"></DropdownMenuImage> :   <DropdownMenuImage  src="https://st.mngbcn.com/web/oi/sections/home/bannersRebajas/2022/06_junio/003_NL_man.jpg?ts=3312281451512&imwidth=736&imdensity=2"></DropdownMenuImage>}
+                  
+                </Right>
+        </Wrapper>            
+    </Container> 
+}
+  </>
+    
   )
 }
 
 export default Navbar
+
