@@ -108,7 +108,6 @@ const Navbar = () => {
   // react states hooks imported from context managaer 
   // display and handleDropdownMenu to handle the dropdownMenu
   const {displayed, handleDropdownMenu, menuItemName} = useContext(GlobalContext)
-  console.log(menuItemName)
 
   return (
     <>
