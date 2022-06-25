@@ -7,7 +7,9 @@ import {useContext} from 'react';
 
 const Container = styled.div`
     height: ${props => props.height} ;
-    display: ${props => props.displayed === false? "none" : "block"} ;
+    /* display: ${props => props.displayed === false? "none" : "block"} ; */
+    position:relative ;
+    
 `
 const Wrapper = styled.div`
     padding: 10px 20px;
@@ -73,6 +75,15 @@ const NavLink = styled(Link)`
     color: black;
 `
 // Dropdwon menu
+
+const DropdownContainer = styled.div`
+  height: 50vh ;
+  display: ${props => props.displayed === false? "none" : "block"} ;
+  /* position: absolute; */
+  /* top:5vh; */
+  z-index: 100 ;
+  background-color:red ;
+`
 const DropdownMenu = styled.div`
   display: flex ;
   flex-direction:column ;
@@ -110,7 +121,6 @@ const Navbar = () => {
   const {displayed, handleDropdownMenu, menuItemName} = useContext(GlobalContext)
 
   return (
-    <>
       <Container height="10vh">
         <Wrapper alignItems="center">
           <Left>
@@ -150,12 +160,9 @@ const Navbar = () => {
           </Right>
 
         </Wrapper>
-    </Container>
-
-
-    {menuItemName === "Kids" ? 
+        {menuItemName === "Kids" ? 
         <Container height="50vh" displayed={displayed} onMouseLeave={() => handleDropdownMenu()}>
-            <Wrapper alignItems="flex-start">  
+            <Wrapper alignItems="flex-start" onMouseLeave={() => handleDropdownMenu()}>  
                        <Left flex="2" display="flex">
                         <DropdownMenu>
                             <DropdownMenuItem>
@@ -216,8 +223,8 @@ const Navbar = () => {
             </Wrapper>            
         </Container>
     :
-     <Container height="50vh" displayed={displayed} onMouseLeave={() => handleDropdownMenu()}>
-        <Wrapper alignItems="flex-start">
+     <DropdownContainer  displayed={displayed} onMouseLeave={() => handleDropdownMenu()}>
+        <Wrapper alignItems="flex-start" onMouseLeave={() => handleDropdownMenu()}>
                   <Left flex="2" display="flex">
                     <DropdownMenu fontSize="20px">
                        <DropdownMenuItem color="red">Sale</DropdownMenuItem>
@@ -251,9 +258,9 @@ const Navbar = () => {
                   
                 </Right>
         </Wrapper>            
-    </Container> 
+    </DropdownContainer> 
 }
-  </>
+    </Container>
     
   )
 }
