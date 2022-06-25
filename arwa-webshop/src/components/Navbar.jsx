@@ -154,7 +154,7 @@ const Navbar = () => {
               </ListItemContainer>
               <ListItemContainer>
                   <MdOutlineShoppingBag style={{fontSize: '22px'}}/>
-                  <NavLink to="/shoppingbag"><ListItemText>Shopping bag</ListItemText></NavLink>
+                  <NavLink to="/cart"><ListItemText>Shopping bag</ListItemText></NavLink>
               </ListItemContainer>
             </List>
           </Right>
