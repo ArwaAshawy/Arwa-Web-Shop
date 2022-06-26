@@ -99,17 +99,19 @@ const Amount = styled.span`
     justify-content: center;
     margin: 15px 5px;
 `
-const Add = styled.option`
-   font-size:24px ;
+const Add = styled.p`
+   font-size:20px ;
    cursor: pointer;
+   transition: all 0.1s ease-in-out !important;
    
    &:hover{
      font-size:30px ;
    }
 `
-const Remove = styled.option`
+const Remove = styled.p`
    font-size:24px ;
    cursor: pointer;
+   transition: all 0.1s ease-in-out !important;
 
    &:hover{
      font-size:30px ;
@@ -129,7 +131,7 @@ const Button = styled.button`
 
 const Product = () => {
 
-  const {amount,handleAmount} = useContext(GlobalContext)
+  const {amount,handleAmount,handleCart} = useContext(GlobalContext)
   let {id} = useParams()
   // states to keep the data that comes from the array about the product
   const [imgs, setImgs] = useState([])
@@ -148,7 +150,6 @@ const Product = () => {
         setColors(product.color)
     }
   } )
-  console.log(title, price, colors)
   },[imgs,title,price,colors])
   
   return (
@@ -190,7 +191,7 @@ const Product = () => {
                   <Amount>{amount}</Amount>
                   <Add onClick={(e) => handleAmount(e)}>+</Add>
               </AmountContainer>
-              <Button>ADD TO CART</Button>
+              <Button onClick={() => handleCart(amount)} >ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>

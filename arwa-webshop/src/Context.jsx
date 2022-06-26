@@ -8,10 +8,13 @@ export const GlobalProvider = ({children}) => {
     const [displayed, setDisplay] = useState(false)
     // a state to catch the menu item thar clicked to specify which dropdown menu to show
     const [menuItemName, setMenuItemName] = useState('')
-    // for the slider and choose a random picture everytime the browser is rendered
+    // for the slider and math.radom to generate a random picture everytime the browser is rendered
     const [slideIndex, setSlideIndex] = useState(Math.floor(Math.random() * (2 - 0 + 1)) + 0)
-    // amount of the product
+    // amount of the product to add in the shopping cart
     const [amount, setAmount] = useState(0)
+    // number of items in the shopping bag
+    const [amountInCart, setAmountOfCart] = useState(0)
+
 
     // to handle displaying dropdown menu in navbar when hover
     const handleDropdownMenu = (e) => {
@@ -35,7 +38,15 @@ export const GlobalProvider = ({children}) => {
             setAmount(prevStat => prevStat-1)
         }
     }
-    console.log(slideIndex);
+    // handle #products in the shopping cart
+    const handleCart = (amount) => {
+        // if (){
+            setAmountOfCart(amountInCart + amount)
+        // } else {
+        //     setNumberOfProducts(numberOfProducts - 1)
+        // }
+        
+    }
     return(<GlobalContext.Provider value={{
         displayed,
         handleDropdownMenu,
@@ -43,7 +54,9 @@ export const GlobalProvider = ({children}) => {
         handleSliderClick,
         slideIndex,
         handleAmount,
-        amount
+        amount,
+        amountInCart,
+        handleCart
     }}>
         {children}
         </GlobalContext.Provider>) 

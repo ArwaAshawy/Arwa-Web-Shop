@@ -24,6 +24,12 @@ const Button = styled.button`
     cursor: pointer;
     font-weight: 600;
     padding: 10px;
+    transition: all 0.5s ease-in-out !important;
+
+    &:hover{
+        background-color:#fcf5f5 ;
+        transform: translateY(-4px)
+    }
 `
 
 const Info = styled.div`

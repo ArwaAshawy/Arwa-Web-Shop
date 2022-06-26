@@ -29,6 +29,13 @@ const Button = styled.button`
     background-color: transparent;
     color: white;
     border-color: white ;
+    transition: all 0.5s ease-in-out !important;
+
+    &:hover{
+        background-color: white;
+        color: black;
+    }
+
 `
 
 const SliderInfo = ({info}) => {

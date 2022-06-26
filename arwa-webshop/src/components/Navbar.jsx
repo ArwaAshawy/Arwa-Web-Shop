@@ -3,6 +3,7 @@ import {MdOutlineSearch,MdOutlinePersonOutline,MdOutlineShoppingBag, MdOutlineFa
 import {Link} from 'react-router-dom'
 import { GlobalContext } from '../Context'
 import {useContext} from 'react';
+import Badge from '@mui/material/Badge';
 
 
 const Container = styled.div`
@@ -73,6 +74,7 @@ const SearchContainer = styled.div`
 const NavLink = styled(Link)`
     text-decoration: none;
     color: black;
+    cursor: pointer;
 `
 // Dropdwon menu
 
@@ -118,10 +120,10 @@ const DropdownMenuImage = styled.img`
 const Navbar = () => {
   // react states hooks imported from context managaer 
   // display and handleDropdownMenu to handle the dropdownMenu
-  const {displayed, handleDropdownMenu, menuItemName} = useContext(GlobalContext)
+  const {displayed, handleDropdownMenu, menuItemName,amountInCart} = useContext(GlobalContext)
 
   return (
-      <Container height="8vh">
+      <Container height="10vh">
         <Wrapper alignItems="center">
           <Left>
             <List>
@@ -144,18 +146,22 @@ const Navbar = () => {
                   <MdOutlineSearch style={{fontSize: '22px'}}/>
                   <ListItemText>To search</ListItemText>
               </ListItemContainer>
-              <ListItemContainer>
+              <NavLink to="/login"><ListItemContainer>
                   <MdOutlinePersonOutline style={{fontSize: '22px'}}/>
-                  <NavLink to="/login"><ListItemText>Login</ListItemText></NavLink>
-              </ListItemContainer>
-              <ListItemContainer>
+                  <ListItemText>Login</ListItemText>
+              </ListItemContainer></NavLink>
+              <NavLink to="/favorite"><ListItemContainer>
                   <MdOutlineFavoriteBorder style={{fontSize: '22px'}}/>
-                  <NavLink to="/favorite"><ListItemText>Favorites</ListItemText></NavLink>
+                <ListItemText>Favorites</ListItemText>
+              </ListItemContainer></NavLink>
+              <NavLink to="/cart"><ListItemContainer>
+                  <Badge badgeContent={amountInCart} color="primary">
+                   <MdOutlineShoppingBag style={{fontSize: '22px'}}/>
+                </Badge>
+                  
+                  <ListItemText>Shopping bag</ListItemText>
               </ListItemContainer>
-              <ListItemContainer>
-                  <MdOutlineShoppingBag style={{fontSize: '22px'}}/>
-                  <NavLink to="/cart"><ListItemText>Shopping bag</ListItemText></NavLink>
-              </ListItemContainer>
+              </NavLink>
             </List>
           </Right>
 
