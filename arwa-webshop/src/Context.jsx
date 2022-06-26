@@ -8,8 +8,8 @@ export const GlobalProvider = ({children}) => {
     const [displayed, setDisplay] = useState(false)
     // a state to catch the menu item thar clicked to specify which dropdown menu to show
     const [menuItemName, setMenuItemName] = useState('')
-    // for the slider
-    const [slideIndex, setSlideIndex] = useState(0)
+    // for the slider and choose a random picture everytime the browser is rendered
+    const [slideIndex, setSlideIndex] = useState(Math.floor(Math.random() * (2 - 0 + 1)) + 0)
     // amount of the product
     const [amount, setAmount] = useState(0)
 
@@ -35,6 +35,7 @@ export const GlobalProvider = ({children}) => {
             setAmount(prevStat => prevStat-1)
         }
     }
+    console.log(slideIndex);
     return(<GlobalContext.Provider value={{
         displayed,
         handleDropdownMenu,
