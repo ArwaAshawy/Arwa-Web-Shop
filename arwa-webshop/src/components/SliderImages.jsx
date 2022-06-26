@@ -12,7 +12,6 @@ const Image = styled.img`
 
 `
 const SliderImages = ({imgs}) => {
-    console.log(imgs)
   return (
       imgs.map(img => <ImgContainer>
         <Image src={img}/>

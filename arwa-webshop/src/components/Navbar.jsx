@@ -77,12 +77,12 @@ const NavLink = styled(Link)`
 // Dropdwon menu
 
 const DropdownContainer = styled.div`
-  height: 50vh ;
+  height: 70vh ;
   display: ${props => props.displayed === false? "none" : "block"} ;
   /* position: absolute; */
   /* top:5vh; */
   z-index: 100 ;
-  background-color:red ;
+  background-color:white ;
 `
 const DropdownMenu = styled.div`
   display: flex ;
@@ -121,7 +121,7 @@ const Navbar = () => {
   const {displayed, handleDropdownMenu, menuItemName} = useContext(GlobalContext)
 
   return (
-      <Container height="10vh">
+      <Container height="8vh">
         <Wrapper alignItems="center">
           <Left>
             <List>
@@ -161,7 +161,7 @@ const Navbar = () => {
 
         </Wrapper>
         {menuItemName === "Kids" ? 
-        <Container height="50vh" displayed={displayed} onMouseLeave={() => handleDropdownMenu()}>
+        <DropdownContainer height="50vh" displayed={displayed} onMouseLeave={() => handleDropdownMenu()}>
             <Wrapper alignItems="flex-start" onMouseLeave={() => handleDropdownMenu()}>  
                        <Left flex="2" display="flex">
                         <DropdownMenu>
@@ -221,7 +221,7 @@ const Navbar = () => {
                         <DropdownMenuImage  src="https://st.mngbcn.com/web/oi/sections/home/bannersRebajas/2022/06_junio/003_NL_nino.jpg?ts=3312281451512&imwidth=352&imdensity=2"></DropdownMenuImage>
                     </Right>
             </Wrapper>            
-        </Container>
+        </DropdownContainer>
     :
      <DropdownContainer  displayed={displayed} onMouseLeave={() => handleDropdownMenu()}>
         <Wrapper alignItems="flex-start" onMouseLeave={() => handleDropdownMenu()}>

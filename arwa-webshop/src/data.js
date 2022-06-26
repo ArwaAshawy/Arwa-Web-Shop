@@ -22,7 +22,7 @@ export const SliderItems = [
 export const categories = [
     {
       id: 1,
-      img: "https://images.unsplash.com/photo-1550614000-4895a10e1bfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZhc2hpb258ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60",
+      img: ["https://images.unsplash.com/photo-1550614000-4895a10e1bfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZhc2hpb258ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60"],
       title: "DRESSES",
     },
     {
@@ -39,47 +39,84 @@ export const categories = [
 
   export const ProductItems = [
     {
-      id:1,
-      img:"https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37031125_87_B.jpg?ts=1647870774953&imwidth=399&imdensity=2",
+      id: 1,
+      img: ["https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37010418_20_B.jpg?ts=1648119989576&imwidth=222&imdensity=2", "https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37010418_20.jpg?ts=1651136893727&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37010418_20.jpg?ts=1651136893727&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37010418_20_D2.jpg?ts=1651136893727&imwidth=222&imdensity=2"],
+      title: "Crop Top",
+      price: 45,
+      color: ["red","white"]
     },
     {
       id:2,
-      img:"https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37031313_88_B.jpg?ts=1654168654015&imwidth=222&imdensity=2&impolicy=featured",
+      img:["https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37050255_88_B.jpg?ts=1647428265666&imwidth=164&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37050255_88.jpg?ts=1649408886044&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/outfit/S20/37050255_88-99999999_01.jpg?ts=1649408886044&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37050255_88_R.jpg?ts=1649408886044&imwidth=337&imdensity=2"],
+      title:"Summer Dress",
+      price:50,
+      color:["pink"]
     },
     {
       id:3,
-      img:"https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27078637_05_B.jpg?ts=1649408886044&imwidth=417&imdensity=2",
+      img:["https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37010398_30_B.jpg?ts=1649423286674&imwidth=222&imdensity=2", "https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37010398_30.jpg?ts=1652440089944&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/outfit/S20/37010398_30-99999999_01.jpg?ts=1652442604615&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37010398_30_R.jpg?ts=1652440089944&imwidth=337&imdensity=2"],
+      title:"Cotton Blouse",
+      price:40,
+      color:["orange","white"]
     },
     {
       id:4,
-      img:"https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27039202_52_B.jpg?ts=1645095993488&imwidth=222&imdensity=2",
+      img:["https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37062510_50_B.jpg?ts=1652108888359&imwidth=222&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37062510_50_R.jpg?ts=1654614644120&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37062510_50.jpg?ts=1654614644120&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/outfit/S20/37062510_50-99999999_01.jpg?ts=1654617279125&imwidth=337&imdensity=2"],
+      title:"Beach Dress",
+      price:35,
+      color:["lightblue", "white"]
     },
     {
       id:5,
-      img:"https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27017109_01_B.jpg?ts=1643903580910&imwidth=222&imdensity=2",
+      img:["https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37050466_01_B.jpg?ts=1649933281715&imwidth=222&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37050466_01.jpg?ts=1651758709716&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/outfit/S20/37050466_01-99999999_01.jpg?ts=1651830632937&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37050466_01_R.jpg?ts=1651758709716&imwidth=337&imdensity=2"],
+      title:"White Dress",
+      price:30,
+      color:["white"]
     },
     {
       id:6,
-      img:"https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27072516_28_B.jpg?ts=1636717974165&imwidth=164&imdensity=2",
+      img:["https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37050423_30_B.jpg?ts=1649423286674&imwidth=222&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37050423_30.jpg?ts=1652889086121&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/outfit/S20/37050423_30-99999999_01.jpg?ts=1652889086121&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37050423_30_R.jpg?ts=1652889086121&imwidth=337&imdensity=2"],
+      title:"Day Dress",
+      price:50,
+      color:["orange", "white"]
     },
     {
       id:7,
-      img:"https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27037123_43_B.jpg?ts=1645800745583&imwidth=417&imdensity=2",
+      img:["https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27037123_43_B.jpg?ts=1645800745583&imwidth=417&imdensity=2",
+      "https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27037123_43.jpg?ts=1646754969057&imwidth=630&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T2/fotos/outfit/S20/27037123_43-99999999_01.jpg?ts=1646755584335&imwidth=630&imdensity=","https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27037123_43_R.jpg?ts=1646755584335&imwidth=630&imdensity=2"],
+      title:"Satin Blouse",
+      price:30,
+      color:["green"]
     },
     {
       id:8,
-      img:"https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27087877_06_B.jpg?ts=1641999064426&imwidth=222&imdensity=2",
+      img:["https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37083849_99_B.jpg?ts=1654855690622&imwidth=222&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37083849_99.jpg?ts=1655464133702&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/outfit/S20/37083849_99-99999999_01.jpg?ts=1655466638671&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37083849_99_D1.jpg?ts=1655466638671&imwidth=337&imdensity=2"],
+      title:"Jumpsuit",
+      price:30,
+      color:["black", "beige"]
     },
     {
       id:9,
-      img:"https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27059053_99_B.jpg?ts=1649092364170&imwidth=311&imdensity=2",
+      img:["https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37081308_12_B.jpg?ts=1653397678062&imwidth=164&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37081308_12_R.jpg?ts=1653911368148&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37081308_12.jpg?ts=1653911368148&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37081308_12_D1.jpg?ts=1653911368148&imwidth=337&imdensity=2"],
+    
+      title:"Jumpsuit",
+      price:35,
+      color:["yellow", "white"]
     },
     {
       id:10,
-      img:"https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27037105_52_B.jpg?ts=1645700795013&imwidth=164&imdensity=2",
+      img:["https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37050353_52_B.jpg?ts=1648642000582&imwidth=164&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37050353_52_R.jpg?ts=1654095094904&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/outfit/S20/37050353_52-99999999_01.jpg?ts=1654096201539&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37050353_52.jpg?ts=1654095094904&imwidth=337&imdensity=2"],
+      title:"Beach Dress",
+      price:30,
+      color:["white","green"]
     },
     {
       id: 11,
-      img: "https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27007127_02_B.jpg?ts=1644398414645&imwidth=311&imdensity=2",
+      img: ["https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27024012_02_B.jpg?ts=1638532350596&imwidth=222&imdensity=2", "https://st.mngbcn.com/rcs/pics/static/T3/fotos/outfit/S20/37022506_02-99999999_01.jpg?ts=1653902241580&imwidth=337&imdensity=2&impolicy=featured","https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27024012_02_R.jpg?ts=1641801969979&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T2/fotos/S20/27024012_02.jpg?ts=1641801969979&imwidth=337&imdensity=2"],
+      title:"Cotton Shirt",
+      price:40,
+      color:["white"]
     }
   ]
+
+

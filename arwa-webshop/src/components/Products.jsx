@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { ProductItems } from '../data'
 import Product from './Product'
+import {Link} from 'react-router-dom'
 
 const Container = styled.div`
     display: flex;
@@ -16,13 +17,21 @@ const Title = styled.h1`
   justify-content:center ;
   align-items:center ;
 `
+
+const NavLink = styled(Link)`
+    text-decoration: none;
+    color: black;
+`
+
 const Products = () => {
     return (
       <>
         <Title>Some of our best products</Title>
         <Container>
             {ProductItems.map(item => (
-            <Product item={item} key={item.id}/>
+            <NavLink to={`/product/${item.id}`}>
+              <Product item={item} key={item.id}/>
+            </NavLink>
             ))}
         </Container>
       </>

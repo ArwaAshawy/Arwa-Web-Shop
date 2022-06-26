@@ -1,5 +1,5 @@
 import { FaFacebookF,FaFoursquare,FaInstagram,FaPinterestP,FaSpotify,FaSnapchat} from "react-icons/fa";
-import {MdOutlineMailOutline,MdOutlineLocalPhone,MdOutlineStoreMallDirectory} from "react-icons/md"
+import {MdOutlineMailOutline,MdOutlineLocalPhone,MdLocationOn} from "react-icons/md"
 import styled from 'styled-components'
 
 
@@ -119,7 +119,7 @@ const Footer = () => {
             <Right>
                 <Title>Contact</Title>
                 <ContactItem>
-                         <MdOutlineStoreMallDirectory style={{marginRight:"10px"}}/> 3997BB Rotterdam
+                         <MdLocationOn style={{marginRight:"10px"}}/> 3997 BB Rotterdam
                  </ContactItem>
                  <ContactItem>
                       <MdOutlineLocalPhone style={{marginRight:"10px"}}/> +1 234 56 78

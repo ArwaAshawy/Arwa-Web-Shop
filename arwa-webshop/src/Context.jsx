@@ -10,6 +10,8 @@ export const GlobalProvider = ({children}) => {
     const [menuItemName, setMenuItemName] = useState('')
     // for the slider
     const [slideIndex, setSlideIndex] = useState(0)
+    // amount of the product
+    const [amount, setAmount] = useState(0)
 
     // to handle displaying dropdown menu in navbar when hover
     const handleDropdownMenu = (e) => {
@@ -25,12 +27,22 @@ export const GlobalProvider = ({children}) => {
             setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0)
         }
     }
+    // to handle add amount when adding a product to cart
+    const handleAmount = (e) => {
+        if (e.target.textContent === "+"){
+            setAmount(prevStat => prevStat+1)
+        } else if (amount !== 0){       
+            setAmount(prevStat => prevStat-1)
+        }
+    }
     return(<GlobalContext.Provider value={{
         displayed,
         handleDropdownMenu,
         menuItemName,
         handleSliderClick,
-        slideIndex
+        slideIndex,
+        handleAmount,
+        amount
     }}>
         {children}
         </GlobalContext.Provider>) 
