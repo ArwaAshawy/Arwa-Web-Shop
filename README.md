@@ -28,5 +28,11 @@ By clicking one if the product in homepage, the user will be directed to product
 when clicking add to cart a badge will appear on shopping bag icon in the navbar
 
 
-### cart page
+### Cart page
 by clicking on the shopping bag icon icon in the navbar ,the user will find the items that he added with a summry of the total price and there he can also edit the amount of the product.
+
+### Login page
+
+### Register page
+
+
