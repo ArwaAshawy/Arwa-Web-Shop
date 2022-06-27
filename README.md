@@ -38,13 +38,13 @@ The use can navigate through the website using the navbar, when the user cover o
 A badge with a number of the items that the user added to his/her shopping bag will be shown on the shopping bag icon in the navbar.
 ![Badge](/arwa-webshop/src/images/BADGE.png)
 
-##Slider Components 
+## Slider Components 
 The user can click one the side arrows to show another slide 
 ![Slider_Two](/arwa-webshop/src/images/Slider1.png)
 ![Slider_Two](/arwa-webshop/src/images/Slider2.png)
 
 
-### Product page
+## Product page
 By clicking one if the product in homepage, the user will be directed to product page which show more details about the product and there the use can add it to the shopping cart and choose the right amount of the product by clicking -/+.
 when clicking add to cart a badge will appear on shopping bag icon in the navbar
 ![Product Page One](/arwa-webshop/src/images/PRODUCT_PAGE1.png)
@@ -52,17 +52,17 @@ when clicking add to cart a badge will appear on shopping bag icon in the navbar
 
 
 
-### Cart page
+## Cart page
 by clicking on the shopping bag icon icon in the navbar ,the user will find the items that he added with a summry of the total price and there he can also edit the amount of the product.
 ![Cart Page One](/arwa-webshop/src/images/CART_PAGE1.png)
 ![Cart Page Two](/arwa-webshop/src/images/CART_PAGE2.png)
 
-### Login page
+## Login page
 The user can login 
 ![Register_one](/arwa-webshop/src/images/LOGIN.png)
 ![Register_Two](/arwa-webshop/src/images/REGISTER2.png)
 
-### Register page
+## Register page
 The user can create an account
 ![Register_one](/arwa-webshop/src/images/REGISTER1.png)
 ![Register_Two](/arwa-webshop/src/images/REGISTER2.png)
