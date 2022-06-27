@@ -1,6 +1,8 @@
-
+import { GlobalContext } from '../Context'
+import {useContext} from 'react';
 import styled from 'styled-components'
 import {MdOutlineSearch,MdOutlineShoppingBag, MdOutlineFavoriteBorder} from 'react-icons/md'
+
 
 
 const Info = styled.div`
@@ -60,6 +62,7 @@ const Icon = styled.div`
 `
 
 const Product = ({item}) => {
+    const {handleAmount} = useContext(GlobalContext)
     return (
         <Container>
             {/* <Circle /> */}
@@ -72,7 +75,9 @@ const Product = ({item}) => {
                     <MdOutlineSearch/>
                 </Icon>
                 <Icon>
-                    <MdOutlineShoppingBag/>
+                    <MdOutlineShoppingBag onClick={(e = 1) => {
+                        handleAmount(1)
+                        }}/>
                 </Icon>
             </Info>
         </Container>

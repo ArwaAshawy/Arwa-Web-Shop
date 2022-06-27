@@ -10,11 +10,19 @@ export const GlobalProvider = ({children}) => {
     const [menuItemName, setMenuItemName] = useState('')
     // for the slider and math.radom to generate a random picture everytime the browser is rendered
     const [slideIndex, setSlideIndex] = useState(Math.floor(Math.random() * (2 - 0 + 1)) + 0)
-    // amount of the product to add in the shopping cart
-    const [amount, setAmount] = useState(0)
+    // amount of single product to add in the shopping cart
+    const [amount, setAmount] = useState(1)
     // number of items in the shopping bag
     const [amountInCart, setAmountOfCart] = useState(0)
-
+    // products in shopping cart
+    const [cartProducts, setCartProduct] = useState([])
+    // total price of product in shopping cart without shipping 
+    const [totalPrice, setTotalPrice] = useState(0)
+    // product
+    const [product, setProduct] = useState({})
+    // total price per product
+    const [productTotalPrice, setProductTotalPrice] = useState(0)
+// amount per product 
 
     // to handle displaying dropdown menu in navbar when hover
     const handleDropdownMenu = (e) => {
@@ -34,18 +42,23 @@ export const GlobalProvider = ({children}) => {
     const handleAmount = (e) => {
         if (e.target.textContent === "+"){
             setAmount(prevStat => prevStat+1)
-        } else if (amount !== 0){       
+        } else if (amount !== 1){       
             setAmount(prevStat => prevStat-1)
-        }
+        } 
     }
     // handle #products in the shopping cart
-    const handleCart = (amount) => {
-        // if (){
-            setAmountOfCart(amountInCart + amount)
-        // } else {
-        //     setNumberOfProducts(numberOfProducts - 1)
-        // }
-        
+    const handleCart = (amount, product) => {
+            
+            if (cartProducts.indexOf(product) === -1){
+                setProduct({...product,amount})
+                setAmountOfCart(amountInCart + amount)
+                setCartProduct([...cartProducts,product])
+            }
+            setTotalPrice(prevStat => prevStat + (product.price))
+    }
+    // handle total price in shopping cart
+    const handleProductsPrice = (price,amount) => {
+        setTotalPrice(prevStat => prevStat + (amount * price))
     }
     return(<GlobalContext.Provider value={{
         displayed,
@@ -56,7 +69,10 @@ export const GlobalProvider = ({children}) => {
         handleAmount,
         amount,
         amountInCart,
-        handleCart
+        handleCart,
+        cartProducts,
+        handleProductsPrice,
+        totalPrice
     }}>
         {children}
         </GlobalContext.Provider>) 

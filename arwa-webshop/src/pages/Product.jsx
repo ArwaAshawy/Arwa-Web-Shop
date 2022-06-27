@@ -134,16 +134,18 @@ const Product = () => {
   const {amount,handleAmount,handleCart} = useContext(GlobalContext)
   let {id} = useParams()
   // states to keep the data that comes from the array about the product
+  const [product,setProduct] = useState({})
   const [imgs, setImgs] = useState([])
   const [title, setTitle] = useState("")
   const [price, setPrice] = useState(0)
   const [colors, setColors ]= useState([])
-
+  // console.log(product);
   // Use effect to prevent to many renders
   useEffect(() => {
     
   ProductItems.filter(product => {
     if ( product.id === parseInt(id)){
+        setProduct(product)
         setImgs(product.img)
         setTitle(product.title)
         setPrice(product.price)
@@ -191,7 +193,7 @@ const Product = () => {
                   <Amount>{amount}</Amount>
                   <Add onClick={(e) => handleAmount(e)}>+</Add>
               </AmountContainer>
-              <Button onClick={() => handleCart(amount)} >ADD TO CART</Button>
+              <Button onClick={() => handleCart(amount,product)} >ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
