@@ -116,7 +116,14 @@ export const categories = [
       title:"Cotton Shirt",
       price:40,
       color:["white"]
-    }
+    },
+    {
+      id:4,
+      img:["https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37062510_50_B.jpg?ts=1652108888359&imwidth=222&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37062510_50_R.jpg?ts=1654614644120&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/S20/37062510_50.jpg?ts=1654614644120&imwidth=337&imdensity=2","https://st.mngbcn.com/rcs/pics/static/T3/fotos/outfit/S20/37062510_50-99999999_01.jpg?ts=1654617279125&imwidth=337&imdensity=2"],
+      title:"Beach Dress",
+      price:35,
+      color:["lightblue", "white"]
+    },
   ]
 
 
