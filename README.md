@@ -21,6 +21,8 @@ I do not intend to profit from this project and it has been created for educatio
 
 ### Home page
 Here the user sees more information about the application and can choose to login from the right side of the Navigation bar.
+</br>
+</br>
 ![Home Page One](/arwa-webshop/src/images/HOME_PAGE1.png)
 ![Home Page Two](/arwa-webshop/src/images/HOME_PAGE2.png)
 ![Home Page Three](/arwa-webshop/src/images/HOME_PAGE3.png)
@@ -36,6 +38,7 @@ The use can navigate through the website using the navbar, when the user cover o
 
 
 A badge with a number of the items that the user added to his/her shopping bag will be shown on the shopping bag icon in the navbar.
+</br>
 ![Badge](/arwa-webshop/src/images/BADGE.png)
 
 ## Slider Components 
