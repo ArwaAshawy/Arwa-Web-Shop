@@ -14,7 +14,7 @@ npm start
 ```
 
 ## About the application
-Arwa-Webshop has been created to help people do theier shopping in easy and interactive way. Due to time and manpower constraints, the application serves only a functional front-end with very basic back-end. The imagea are taken from Mango.com.
+Arwa-Webshop has been created to help people do theier shopping in easy and interactive way. Due to time and manpower constraints, the application serves only a functional front-end with very basic back-end. The images are taken from Mango.com.
 I do not intend to profit from this project and it has been created for educational purposes only.
 
 ## Structure
@@ -38,6 +38,10 @@ The use can navigate through the website using the navbar, when the user cover o
 A badge with a number of the items that the user added to his/her shopping bag will be shown on the shopping bag icon in the navbar.
 ![Badge](/arwa-webshop/src/images/BADGE.png)
 
+##Slider Components 
+The user can click one the side arrows to show another slide 
+![Slider_Two](/arwa-webshop/src/images/Slider1.png)
+![Slider_Two](/arwa-webshop/src/images/Slider2.png)
 
 
 ### Product page
@@ -56,5 +60,6 @@ by clicking on the shopping bag icon icon in the navbar ,the user will find the 
 ### Login page
 
 ### Register page
-
-
+The user can create an account
+![Register_one](/arwa-webshop/src/images/REGISTER1.png)
+![Register_Two](/arwa-webshop/src/images/REGISTER2.png)
