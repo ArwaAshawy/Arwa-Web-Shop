@@ -38,7 +38,7 @@ The use can navigate through the website using the navbar, when the user cover o
 A badge with a number of the items that the user added to his/her shopping bag will be shown on the shopping bag icon in the navbar.
 ![Badge](/arwa-webshop/src/images/BADGE.png)
 
-##Slider Components 
+## Slider Components 
 The user can click one the side arrows to show another slide 
 ![Slider_Two](/arwa-webshop/src/images/Slider1.png)
 ![Slider_Two](/arwa-webshop/src/images/Slider2.png)
