@@ -24,27 +24,29 @@ Here the user sees more information about the application and can choose to logi
 ![Home Page One](/arwa-webshop/src/images/HOME_PAGE_1.png)
 ![Home Page Two](/arwa-webshop/src/images/HOME_PAGE_2.png)
 ![Home Page Three](/arwa-webshop/src/images/HOME_PAGE_3.png)
-![Home Page One](/arwa-webshop/src/images/HOME_PAGE_4.png)
+![Home Page Four](/arwa-webshop/src/images/HOME_PAGE4.png)
 
 ## NavBar Component
 The use can navigate through the website using the navbar, when the user cover on Ladies,Men or Kids, a dropdwon menu will be shown and depending on which item the user hovered on a different dropdown menu will appear. 
-![Home Page One](/arwa-webshop/src/images/HOME_PAGE_4.png)
-![Home Page TWo](/arwa-webshop/src/images/NAVBAR_COMPONENT1.pg)
-![Home Page Three](/arwa-webshop/src/images/NAVBAR_COMPONENT2.png)
+
+![Navbar One](/arwa-webshop/src/images/NAVBAR_COMPONENT1.png)
+![Navbar_Two](/arwa-webshop/src/images/NAVBAR_COMPONENT2.png)
+![Navbar_Two](/arwa-webshop/src/images/NAVBAR_COMPONENT3.png)
+
 
 A badge with a number of the items that the user added to his/her shopping bag will be shown on the shopping bag icon in the navbar.
-![Home Page One](/arwa-webshop/src/images/BADGE.png)
+![Badge](/arwa-webshop/src/images/BADGE.png)
 
 ### Product page
 By clicking one if the product in homepage, the user will be directed to product page which show more details about the product and there the use can add it to the shopping cart and choose the right amount of the product by clicking -/+.
 when clicking add to cart a badge will appear on shopping bag icon in the navbar
-![Home Page One](/arwa-webshop/src/images/PRODUCT_PAGE1.png)
+![Product Page One](/arwa-webshop/src/images/PRODUCT_PAGE1.png)
 
 
 ### Cart page
 by clicking on the shopping bag icon icon in the navbar ,the user will find the items that he added with a summry of the total price and there he can also edit the amount of the product.
-![Home Page One](/arwa-webshop/src/images/CART_PAGE1.png)
-![Home Page Two](/arwa-webshop/src/images/CART_PAGE2.png)
+![Cart Page One](/arwa-webshop/src/images/CART_PAGE1.png)
+![Cart Page Two](/arwa-webshop/src/images/CART_PAGE2.png)
 
 ### Login page
 
