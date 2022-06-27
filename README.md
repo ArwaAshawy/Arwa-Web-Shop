@@ -37,10 +37,14 @@ The use can navigate through the website using the navbar, when the user cover o
 A badge with a number of the items that the user added to his/her shopping bag will be shown on the shopping bag icon in the navbar.
 ![Badge](/arwa-webshop/src/images/BADGE.png)
 
+
+
 ### Product page
 By clicking one if the product in homepage, the user will be directed to product page which show more details about the product and there the use can add it to the shopping cart and choose the right amount of the product by clicking -/+.
 when clicking add to cart a badge will appear on shopping bag icon in the navbar
 ![Product Page One](/arwa-webshop/src/images/PRODUCT_PAGE1.png)
+
+
 
 
 ### Cart page
