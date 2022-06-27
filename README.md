@@ -58,6 +58,9 @@ by clicking on the shopping bag icon icon in the navbar ,the user will find the 
 ![Cart Page Two](/arwa-webshop/src/images/CART_PAGE2.png)
 
 ### Login page
+The user can login 
+![Register_one](/arwa-webshop/src/images/LOGIN.png)
+![Register_Two](/arwa-webshop/src/images/REGISTER2.png)
 
 ### Register page
 The user can create an account
