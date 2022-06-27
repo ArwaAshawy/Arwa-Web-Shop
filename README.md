@@ -29,8 +29,8 @@ Here the user sees more information about the application and can choose to logi
 ## NavBar Component
 The use can navigate through the website using the navbar, when the user cover on Ladies,Men or Kids, a dropdwon menu will be shown and depending on which item the user hovered on a different dropdown menu will appear. 
 ![Home Page One](/arwa-webshop/src/images/HOME_PAGE_4.png)
-![Home Page One](/arwa-webshop/src/images/NAVBAR_COMPONENT1.pg)
-![Home Page One](/arwa-webshop/src/images/NAVBAR_COMPONENT2.png)
+![Home Page TWo](/arwa-webshop/src/images/NAVBAR_COMPONENT1.pg)
+![Home Page Three](/arwa-webshop/src/images/NAVBAR_COMPONENT2.png)
 
 A badge with a number of the items that the user added to his/her shopping bag will be shown on the shopping bag icon in the navbar.
 ![Home Page One](/arwa-webshop/src/images/BADGE.png)
@@ -44,7 +44,7 @@ when clicking add to cart a badge will appear on shopping bag icon in the navbar
 ### Cart page
 by clicking on the shopping bag icon icon in the navbar ,the user will find the items that he added with a summry of the total price and there he can also edit the amount of the product.
 ![Home Page One](/arwa-webshop/src/images/CART_PAGE1.png)
-![Home Page One](/arwa-webshop/src/images/CART_PAGE2.png)
+![Home Page Two](/arwa-webshop/src/images/CART_PAGE2.png)
 
 ### Login page
 
