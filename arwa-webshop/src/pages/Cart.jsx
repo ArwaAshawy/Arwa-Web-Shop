@@ -49,11 +49,6 @@ const Info = styled.div`
     flex: 3;
 `
 
-const Hr = styled.div`
-    background-color: #eee;
-    border: none;
-    height: 1px;
-`
 
 const Summary = styled.div`
     flex:1;
@@ -114,10 +109,11 @@ const  Cart  = () => {
                             <SummaryItemText>Estimated Shipping</SummaryItemText>
                             <SummaryItemPrice>$ 5,99</SummaryItemPrice>
                         </SummaryItem>
-                        <SummaryItem>
+                        {totalPrice > 30 ? <SummaryItem>
                             <SummaryItemText>Shipping Discount</SummaryItemText>
-                            <SummaryItemPrice>$ {totalPrice > 30 ? "- 5,99" : "5,99" }</SummaryItemPrice>
-                        </SummaryItem>
+                            <SummaryItemPrice>$ -5,99 </SummaryItemPrice>
+                        </SummaryItem>: "" }
+                        
                             <SummaryItem type="total">
                             <SummaryItemText>Total</SummaryItemText>
                             <SummaryItemPrice>$ {totalPrice +  shippingCost}</SummaryItemPrice>
