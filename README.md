@@ -24,7 +24,7 @@ Here the user sees more information about the application and can choose to logi
 ![Home Page One](/arwa-webshop/src/images/HOME_PAGE_1.png)
 ![Home Page Two](/arwa-webshop/src/images/HOME_PAGE_2.png)
 ![Home Page Three](/arwa-webshop/src/images/HOME_PAGE_3.png)
-![Home Page One](/arwa-webshop/src/images/HOME_PAGE_4.png)
+![Home Page Four](/arwa-webshop/src/images/HOME_PAGE_4.png)
 
 ## NavBar Component
 The use can navigate through the website using the navbar, when the user cover on Ladies,Men or Kids, a dropdwon menu will be shown and depending on which item the user hovered on a different dropdown menu will appear. 
