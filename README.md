@@ -34,6 +34,7 @@ The use can navigate through the website using the navbar, when the user cover o
 ![Navbar_Two](/arwa-webshop/src/images/NAVBAR_COMPONENT3.png)
 
 
+
 A badge with a number of the items that the user added to his/her shopping bag will be shown on the shopping bag icon in the navbar.
 ![Badge](/arwa-webshop/src/images/BADGE.png)
 
