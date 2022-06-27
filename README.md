@@ -40,6 +40,7 @@ The use can navigate through the website using the navbar, when the user cover o
 </br>
 A badge with a number of the items that the user added to his/her shopping bag will be shown on the shopping bag icon in the navbar.
 </br>
+
 ![Badge](/arwa-webshop/src/images/BADGE.png)
 
 ## Slider Components 
