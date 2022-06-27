@@ -81,10 +81,10 @@ const NavLink = styled(Link)`
 const DropdownContainer = styled.div`
   height: 70vh ;
   display: ${props => props.displayed === false? "none" : "block"} ;
-  /* position: absolute; */
-  /* top:5vh; */
+  position: absolute;
   z-index: 100 ;
   background-color:white ;
+  width: 100vw;
 `
 const DropdownMenu = styled.div`
   display: flex ;

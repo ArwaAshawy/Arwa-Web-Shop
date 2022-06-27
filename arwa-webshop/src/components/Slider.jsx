@@ -72,8 +72,9 @@ const Slider = () => {
       <Arrow direction="right" onClick={() => handleSliderClick("right")}>
           <MdArrowRight/>
       </Arrow>
+      <SliderInfo/>
     </Container>
-    {SliderItems.map(item => <SliderInfo item={item} key={item.id}/>)}
+
           
       </>  )
 }
