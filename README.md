@@ -21,8 +21,8 @@ I do not intend to profit from this project and it has been created for educatio
 
 ### Home page
 Here the user sees more information about the application and can choose to login from the right side of the Navigation bar.
-![Home Page One](/arwa-webshop/src/images/HOME_PAGE_1.png)
-![Home Page Two](/arwa-webshop/src/images/HOME_PAGE_2.png)
+![Home Page One](/arwa-webshop/src/images/HOME_PAGE1.png)
+![Home Page Two](/arwa-webshop/src/images/HOME_PAGE2.png)
 ![Home Page Three](/arwa-webshop/src/images/HOME_PAGE_3.png)
 ![Home Page Four](/arwa-webshop/src/images/HOME_PAGE4.png)
 
