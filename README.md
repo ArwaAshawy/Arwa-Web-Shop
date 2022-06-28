@@ -14,8 +14,11 @@ npm start
 ```
 
 ## About the application
-Arwa-Webshop has been created to help people do theier shopping in easy and interactive way. Due to time and manpower constraints, the application serves only a functional front-end with very basic back-end. The images are taken from Mango.com.
+Arwa-Webshop has been created to help people do their shopping in an easy and interactive way. Due to time and manpower constraints, the application serves only a functional front-end. The images are taken from Mango.com.
 I do not intend to profit from this project and it has been created for educational purposes only.
+
+Arwa-webshop is an e-commerce web application built using React([/arwa-webshop/src](https://reactjs.org/)). For styling styled-components was used (https://styled-components.com/).
+
 
 ## Structure
 
