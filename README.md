@@ -24,6 +24,7 @@ Arwa-webshop is an e-commerce web application built using React (https://reactjs
 
 ### Home page
 Here the user sees more information about the application and can choose to login from the right side of the Navigation bar.
+The home page has a navbar component (/arwa-webshop/src/components/README.md) , when the user hover on it a dropdown menu will appear depending on which item in the user hovered on.
 </br>
 </br>
 ![Home Page One](/arwa-webshop/src/images/HOME_PAGE1.png)
@@ -31,20 +32,9 @@ Here the user sees more information about the application and can choose to logi
 ![Home Page Three](/arwa-webshop/src/images/HOME_PAGE3.png)
 ![Home Page Four](/arwa-webshop/src/images/HOME_PAGE4.png)
 
-## NavBar Component
-The use can navigate through the website using the navbar, when the user cover on Ladies,Men or Kids, a dropdwon menu will be shown and depending on which item the user hovered on a different dropdown menu will appear. 
-</br>
-</br>
-![Navbar One](/arwa-webshop/src/images/NAVBAR_COMPONENT1.png)
-![Navbar_Two](/arwa-webshop/src/images/NAVBAR_COMPONENT2.png)
-![Navbar_Two](/arwa-webshop/src/images/NAVBAR_COMPONENT3.png)
 
-</br>
-</br>
-A badge with a number of the items that the user added to his/her shopping bag will be shown on the shopping bag icon in the navbar.
-</br>
+The home page has a navbar component 
 
-![Badge](/arwa-webshop/src/images/BADGE.png)
 
 ## Slider Components 
 The user can click one the side arrows to show another slide 
